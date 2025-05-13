@@ -1,0 +1,1124 @@
+\documentclass[a5paper,12pt]{article}
+
+% XeLaTeX setup for Cyrillic
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{macedonian}
+\setotherlanguage{english}
+
+% Select a font with good Cyrillic support
+\setmainfont{Noto Serif}
+\newfontfamily\cyrillicfont{Noto Serif}
+% Alternatives: , Noto Serif, FreeSerif
+\usepackage{lmodern}            % Latin Modern fonts
+\usepackage{geometry}           % Page geometry
+\usepackage{graphicx}           % For including images
+\usepackage{xcolor}             % For colored text
+\usepackage{tcolorbox}          % For creating colored boxes
+\usepackage{enumitem}           % For customizing lists
+\usepackage{titlesec}           % For customizing section titles
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{multirow}           % For tables
+\usepackage{multicol}
+\usepackage{wrapfig}            % For wrapping text around figures
+\usepackage{hyperref}           % For hyperlinks
+
+% Page geometry for booklet format
+\geometry{
+  a5paper,
+  top=1.5cm,
+  bottom=1.5cm,
+  left=1.5cm,
+  right=1.5cm,
+  footskip=1cm
+}
+
+% Define colors for the document
+\definecolor{titlecolor}{RGB}{0,102,204}
+\definecolor{boxcolor}{RGB}{230,242,255}
+\definecolor{accentcolor}{RGB}{255,153,0}
+\definecolor{warmred}{RGB}{240,37,37}
+\definecolor{warmredbg}{RGB}{252,233,233}
+
+% Customize section titles
+\titleformat{\section}
+  {\color{titlecolor}\Large\bfseries}
+  {\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+  {\color{titlecolor}\large\bfseries}
+  {\thesubsection.}{0.5em}{}
+
+% Custom header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[C]{\textcolor{titlecolor}{Логопед}} 
+\fancyfoot[C]{\thepage}
+
+% Custom environments
+\newenvironment{activity}[1]{%
+  \begin{tcolorbox}[colback=boxcolor,colframe=titlecolor,title={\textbf{#1}},fonttitle=\bfseries]
+}{%
+  \end{tcolorbox}
+}
+
+\newenvironment{instruction}{%
+  \begin{tcolorbox}[colback=white,colframe=accentcolor,title={\textbf{Инструкции}},fonttitle=\bfseries] 
+}{%
+  \end{tcolorbox}
+}
+
+% Custom environments
+\newenvironment{song}{%
+  \begin{tcolorbox}[colback=warmredbg,colframe=warmred,title={\textbf{Песничка}},fonttitle=\bfseries]
+}{%
+  \end{tcolorbox}
+}
+% Document begins
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\centering
+{\Huge\textcolor{titlecolor}{\textbf{Логопед}}\par} 
+\vspace{1cm}
+{\Large\textcolor{accentcolor}{Бојан}\par} 
+\vspace{2cm}
+
+% \includegraphics[width=0.6\textwidth]{example-image} % Replace with your logo/image
+
+\vspace{2cm}
+{\large Изработено:\par} 
+{\large\textit{Томче Делев}\par}
+\vspace{1cm}
+{\large\today\par}
+\end{titlepage}
+
+% Table of contents
+\tableofcontents
+\newpage
+
+\section{06.11.2024} 
+
+\begin{instruction}
+Држете ги стистнати забчињата, јазичето да не „ѕирка“ меѓу запчиња.
+\end{instruction}
+
+\noindent % Ensures no paragraph indentation
+\begin{minipage}[t]{0.19\textwidth}
+  са-са\\
+  са-се\\
+  са-си\\
+  са-со\\
+  са-су
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.19\textwidth}
+  се-са\\
+  се-се\\
+  се-си\\
+  се-со\\
+  се-су
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  си-са\\
+  си-се\\
+  си-си\\
+  си-со\\
+  си-су
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  со-са\\
+  со-се\\
+  со-си\\
+  со-со\\
+  со-су
+\end{minipage}
+\hfill % Horizontal fill - pushes columns apart evenly
+\begin{minipage}[t]{0.19\textwidth}
+  су-са\\
+  су-се\\
+  су-си\\
+  су-со\\
+  су-су
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent 
+\begin{minipage}[t]{0.19\textwidth}
+  а-са\\
+  а-се\\
+  а-си\\
+  а-со\\
+  а-су
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.19\textwidth}
+  е-са\\
+  е-се\\
+  е-си\\
+  е-со\\
+  е-су
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  и-са\\
+  и-се\\
+  и-си\\
+  и-со\\
+  и-су
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  о-са\\
+  о-се\\
+  о-си\\
+  о-со\\
+  о-су
+\end{minipage}
+\hfill % Horizontal fill - pushes columns apart evenly
+\begin{minipage}[t]{0.19\textwidth}
+  у-са\\
+  у-се\\
+  у-си\\
+  у-со\\
+  у-су
+\end{minipage}
+
+\section{08.11.2024}
+
+\begin{activity}{Зборчиња} % "Exercise 'Smile'" in Russian
+\begin{multicols}{4}
+сака\\ сапун\\ сарма\\ саат\\ салата\\ сала\\ само\\ салеп\\ сако\\ сања\\ Сани\\ Саво\\ саќе\\ Сандра\\ Самка\\ село\\ седум\\ сече\\ семка\\ семки\\ сено\\ секоја\\ секој\\ сенка\\ сила\\
+сино\\ Симо\\ сиво\\ сика\\ сипа\\ сирење\\ сито\\ Сирма\\ соба\\ сок\\ сорта\\ сонце\\ сомун\\ Солун\\ сон\\ сони\\ сонува\\ Сопиште\\ сопка\\ сопна\\ сокна\\ сонце\\ супа\\ сутура\\ сука\\
+сукало\\ сурла\\ сума\\ суди\\ судија\\ смоки\\ смел\\ смее\\ смело\\ спои\\ спојувалка\\ скока\\ скок\\ Скопје\\ скали\\ снешко\\ снег\\ стои\\ сто\\ стар
+\end{multicols}
+
+\end{activity}
+
+
+\section{13.11.2024} 
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+маса\\ каса\\ реси\\ носи\\ Веса\\ меси\\ Тасе\\ Таса\\ месо\\ високо\\ досадно\\ посипа\\ масичка\\ коса\\ кеса\\ висина\\ коси\\ песок\\ расеа\\
+масира\\ пасира\\ Васо\\ Василка\\ косилка\\ носилка\\ поседи\\ боса\\ роса\\ носе\\ Деси\\ мисирка\\ наседна\\
+коска\\ маска\\ Васка\\ Роска\\ тесно\\ десно\\ писмо\\ место\\ виски\\ масно\\ тесто\\ песто\\ костени\\ Коста\\ пости\\ вести
+\end{multicols}
+\end{activity}
+
+\section{13.11.2024} 
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+чипс\\ вис\\ мис\\ кокос\\ ананас\\ пипс\\ кос\\ мирис\\ полис\\ сестра\\ спаси\\ Спасе\\ свест\\ месесто\\ состојки\\ состои\\ смеса\\
+смисол\\ смести\\ сос\\ сусам\\ свесен\\ спасен\\ спуст\\ снесе\\ сласт\\ висост\\ состави\\ составува\\ сосови\\ сиресто\\ спласната\\ спасува
+\end{multicols}
+\end{activity}
+
+\section{22.11.2024} 
+\begin{itemize}
+  \item Симе носи ананас.
+  \item Во среда ќе одам во Скопје.
+  \item Сања носи сукња.
+  \item Се сопнав на скалите.
+  \item Ми се насмевна Саше.
+  \item Списокот е целосно пополнет.
+  \item Ми се грицкаат смоки.
+  \item Ќе пијам сок од праска.
+  \item Седев и се замислив.
+  \item За ручек ќе јадам супа.
+  \item Сакам да скокам.
+  \item Ќе се запишам на спорт.
+  \item Ми се спие.
+  \item Соња има син автомобил.
+  \item Ја скратив косата.
+  \item Веса коси со косилка.
+  \item Стево стави сол во салатата.
+  \item Многу е кисел сокот.
+  \item Се скрши јајцето и излезе диносауросот.
+\end{itemize}
+
+
+\section{27.11.2024}
+\noindent 
+\begin{minipage}[t]{0.19\textwidth}
+  за-за\\
+  за-зе\\
+  за-зи\\
+  за-зо\\
+  за-зу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.19\textwidth}
+  зе-за\\
+  зе-зе\\
+  зе-зи\\
+  зе-зо\\
+  зе-зу
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  зи-за\\
+  зи-зе\\
+  зи-зи\\
+  зи-зо\\
+  зи-зу
+\end{minipage}
+\hfill % Horizontal fill
+\begin{minipage}[t]{0.19\textwidth}
+  зо-за\\
+  зо-зе\\
+  зо-зи\\
+  зо-зо\\
+  зо-зу
+\end{minipage}
+\hfill % Horizontal fill - pushes columns apart evenly
+\begin{minipage}[t]{0.19\textwidth}
+  зу-за\\
+  зу-зе\\
+  зу-зи\\
+  зу-зо\\
+  зу-зу
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+заб\\ заби\\ запче\\ запна\\ закон\\ замка\\ завчера\\ заспа\\ затка\\ земја\\ зема\\ зелено\\ зелка\\ зебра\\ зеза\\ зима\\
+зина\\ зимско\\ Зоки\\ зошто\\ зона\\ Зока\\ знаме\\ значка\\ змија\\ зајак\\ злато\\ знае\\ змеј\\ закон\\ звук\\ звучник\\ златно\\ златко\\ збор\\ зборува
+\end{multicols}
+\end{activity}
+
+
+\section{29.11.2024} 
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+боза\\ коза\\ нозе\\ Розе\\ Роза\\ вози\\ мезе\\ мези\\ лоза\\ база\\ теза\\ виза\\ низа\\ Пиза\\ казан\\ базен\\ возен\\ доза\\ маза\\ лазе\\ казна\\ базна
+вазна\\ дозна\\ познат\\ бозле\\ Козле
+\end{multicols}
+\end{activity}
+
+\begin{instruction}
+  Бидејќи во овие зборови гласот \textbf{з} го обезвучува, кога го читате, одвојте го \textbf{з} од остнатите гласови. Пр. \emph{ма-ззз-на}
+\end{instruction}
+
+\section{04.12.2024} 
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+доказ\\ патоказ\\ млаз\\ пегаз\\ папаз\\ вез
+\end{multicols}
+\end{activity}
+\begin{itemize}
+  \item Зелката е кисела.
+  \item Го следам патоказот.
+  \item Лазе ја скрши вазната.
+  \item Ми се скрши срцето.
+  \item Роза вози брзо.
+  \item Розе пие боза. 
+  \item Базенот е зелен.
+  \item Зоки фати змија.
+  \item Зајакот трча брзо.
+  \item Змијата е златна.
+\end{itemize}
+
+\section{11.12.2024} 
+\begin{instruction}
+Гласот Ц се изговара слично како С и З, со стиснати запчиња и јазиче внатре.
+\end{instruction}
+
+\noindent 
+\begin{center}
+  ца\\
+  це\\
+  ци\\
+  цо\\
+  цу
+\end{center}
+\begin{minipage}[t]{0.19\textwidth}
+  аца\\
+  аце\\
+  аци\\
+  ацо\\
+  ацу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.19\textwidth}
+  еца\\
+  еце\\
+  еци\\
+  ецо\\
+  ецу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.19\textwidth}
+  ица\\
+  ице\\
+  ици\\
+  ицо\\
+  ицу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.19\textwidth}
+  оца\\
+  оце\\
+  оци\\
+  оцо\\
+  оцу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.19\textwidth}
+  уца\\
+  уце\\
+  уци\\
+  уцо\\
+  уцу
+\end{minipage}
+
+\vspace{1cm}
+\begin{minipage}[t]{0.18\textwidth}
+  цаца\\
+  цаце\\
+  цаци\\
+  цацо\\
+  цацу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  цеца\\
+  цеце\\
+  цеци\\
+  цецо\\
+  цецу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  цица\\
+  цице\\
+  цици\\
+  цицо\\
+  цицу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  цоца\\
+  цоце\\
+  цоци\\
+  цоцо\\
+  цоцу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  цуца\\
+  цуце\\
+  цуци\\
+  цуцо\\
+  цуцу
+\end{minipage}
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+цврче\\ цапна\\ цака\\ Цане\\ Цако\\ цело\\ целофан\\ целина\\ Цеко\\ цивка\\ цигари\\ Цима\\ Цоне\\ цокле\\ Цобе\\ цути\\ Цуне\\ Цуки
+\end{multicols}
+\end{activity}
+
+\section{13.12.2024}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+Маца\\ каца\\ Коце\\ Поце\\ боца\\ веце\\ лице\\ Мице\\ Коце\\ баце\\ Ница\\ пица\\ жица\\ редица\\ меница\\ меденица\\ ластовица\\ корица\\
+седмица\\ меца\\ деца\\ коленица\\ паница\\ баница\\ Анкица\\ Радица\\ Надица\\ Даница\\ рамница\\ Тоци\\ боци\\ Деница\\ Дениција
+\end{multicols}
+\end{activity}
+
+
+\section{27.12.2024}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+конец\\ боц\\ ланец\\ котелец\\ палец\\ мац\\ патец\\ виц\\ ноктец\\ вранец\\ врабец\\ лонец\\ ранец\\ колец\\ венец\\ пустец\\ данец\\ Цацко\\ цуцла\\ Цеце\\ цица\\ Цацо
+\end{multicols}
+\end{activity}
+\begin{itemize}
+  \item Бебето цуца цуцла.
+  \item Маца го скина цвеќето.
+  \item Мице го повреди палецот.
+  \item Раца направи баница.
+  \item Децата јадат мекици.
+  \item Во лонецот се вари цвекло.
+  \item На корицата се Каца и Коце.
+  \item Во ранецот имам црна блуза.
+  \item Цигарите се во целофан.
+  \item Цвеќето цути на пролет.
+  \item Глувчето Мице цивка. 
+  \item Децата видоа ластовица. 
+  \item Анкица прави пица.
+  \item Лицето ми е црвено.
+  \item И цвеклото е црвено.
+  \item Во ваницата има сиренце.
+  \item Цобе се боцна на жица.
+  \item Цеце отиде во Ница.
+\end{itemize}
+
+\section{11.12.2024} 
+\begin{instruction}
+Во текот на секојдневието корегирајте го неправилниот изговор на гласовите кои до сега се работени, за да стане свесен за нивната правилна употреба.
+\end{instruction}
+\begin{itemize}
+  \item На троседот седи зелена гасеница.
+  \item Слонот цапна во големиот базен.
+  \item Зајачето скока високо и трча брзо.
+  \item Грозјето е зелено и слатко.
+  \item Зорица ми испржи јајца.
+  \item Многу сакам да јадам краставички.
+  \item Лавот се исплаши од глувчето.
+  \item Бебето цуца цуцла.
+  \item Златко носи црвена маица.
+  \item Во теглата има шарени цевки.
+  \item Ѕвончето ѕвони гласно.
+  \item Ѕидарот ѕида ѕид.
+  \item Ѕвездата свети на неботo.
+\end{itemize}
+
+\section{15.01.2025}
+\begin{song}
+  Ќе наберам цвеќе најубаво на свет\\
+  и ќе ја гушнам мама послатка од мед.\\
+
+  Ќе ја стегнам милно, и ќе ја гушнам силно.\\
+  Сонце си што грее Птица, си што пее.\\
+
+  Најдобра на свет и од мајќи пет!
+\end{song}
+
+\section{17.01.2025}
+Вежби за автоматизација на гласовите С, З и Ц со опис на слики.
+
+\section{22.01.2025}
+\begin{itemize}
+  \item Ѕвончето ѕвони гласно.
+  \item Ѕзвездата свети силно.
+  \item Ѕидарот го соѕида ѕидот.
+  \item Ѕвонко заѕвони на ѕвончето.
+  \item Ѕвезда сука баница.
+  \item Ѕидот е сина боја.
+  \item Цане виде ѕуница.
+  \item Цвеќето на масата е звездесто.
+  \item Дедо Мраз има ѕвонче во раката.
+  \item На Саше му ѕвони телефонот.
+  \item Цвета направи ѕвезда на гимнастика.
+\end{itemize}
+
+\section{24.01.2025}
+Вежби за автоматизација на гласовите С, З, Ц и Ѕ со опис на слики и сликовници.
+
+\section{29.01.2025}
+\begin{instruction}
+  \begin{enumerate}
+    \item Наизменично ќе се насмевне широко, па ќе ги собере усничките.
+    \item Во насмевка кажува долго \textbf{СССС}, а со собрани усни долго \textbf{ШШШШ} наизменично во низа.
+  \end{enumerate}
+\end{instruction}
+
+\section{31.01.2025}
+\noindent 
+\begin{minipage}[t]{0.18\textwidth}
+  шаша\\
+  шаше\\
+  шаши\\
+  шашо\\
+  шашу
+\end{minipage}
+\begin{minipage}[t]{0.18\textwidth}
+  шеша\\
+  шеше\\
+  шеши\\
+  шешо\\
+  шешу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  шиша\\
+  шише\\
+  шиши\\
+  шишо\\
+  шишу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  шоша\\
+  шоше\\
+  шоши\\
+  шошо\\
+  шошу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  шуша\\
+  шуше\\
+  шуши\\
+  шушо\\
+  шушу
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent 
+\begin{minipage}[t]{0.18\textwidth}
+  aша\\
+  aше\\
+  aши\\
+  aшо\\
+  aшу
+\end{minipage}
+\begin{minipage}[t]{0.18\textwidth}
+  еша\\
+  еше\\
+  еши\\
+  ешо\\
+  ешу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  иша\\
+  ише\\
+  иши\\
+  ишо\\
+  ишу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  оша\\
+  оше\\
+  оши\\
+  ошо\\
+  ошу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  уша\\
+  уше\\
+  уши\\
+  ушо\\
+  ушу
+\end{minipage}
+
+\section{05.02.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+шака\\ шара\\ Шаде\\ шамија\\ шав\\ шахта\\ шах\\ шатор\\ шатка\\ Шана\\ шамар\\ шам\\ шета\\ шеќер\\ шема\\ Шенка\\ шепа\\ шепот\\ шепоти\\ шепка\\ шило\\ шини\\ шивач\\
+шие\\ шипка\\ шипиники\\ шок\\ шокира\\ Шон\\ шубара\\ шут\\ шутира\\ шули\\ шума\\ шумски\\ шунка\\ Шутка\\ шуто\\ шуплина\\ шупа\\ шупло\\ шуливо\\ шука
+\end{multicols}
+\end{activity}
+
+\section{07.02.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+меше\\ дише\\ каша\\ вишо\\ Дишо\\ Моша\\ ваше\\ седеше\\ молеше\\ Нешо\\ пуши\\ пешак\\ Тоше\\ брише\\ избриша\\ велеше\\ меша\\ решетка\\ решето\\ реши\\ Рашо\\ буши
+избуши\\ вадеше\\ ладеше\\ пееше\\ прошета\\ мушичка\\ пишува\\ болеше\\ плаши\\ глушец\\ прашина\\ нишесте\\ рашири\\ пошироко\\ пошира\\ тушира\\ кокошарник
+\end{multicols}
+\end{activity}
+
+\section{12.02.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+кош\\ пеш\\ дадеш\\ веш\\ мош\\ полниш\\ Радовиш\\ Ниш\\ вениш\\ каниш\\ боиш\\ бош\\ надеж\\ шишарка\\ шашаво\\ шешир\\ шушка\\ шушти\\ шушлер\\ шакшука\\ шиша\\ ишиша\\ потшиша
+\end{multicols}
+\end{activity}
+
+\section{14.02.2025}
+\begin{itemize}
+  \item Мише носи шешир.
+  \item Бошко оди во шумата.
+  \item Саше собира шишарки.
+  \item Тоше го намести шаторот.
+  \item Избриши ја прашината! 
+  \item Мишко го избуши ѕидот.
+  \item Сношти ме болеше мешето.
+  \item Рашо се потшиша.
+  \item На клупата седеше и пишуваше.
+  \item Нешто ми шушна и се исплашив.
+  \item Што боиш? 
+  \item Маша се тушира.
+\end{itemize}
+
+\section{19.02.2025}
+\begin{song}
+  Цреши, праски, вишни, сливи\\
+  миризливо ќе расцветаат!\\
+  Вредни пчелки и пеперутки\\
+  кај нив ќе долетраат!\\
+
+  Штркот штрака на цел глас\\
+  нова пролет, еве иде\\
+  расцутено сѐ ќе биде.
+\end{song}
+
+\section{26.02.2025}
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+  жа\\ же\\ жи\\ жо\\ жу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+аж\\ eж\\ иж\\ ож\\ уж
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.18\textwidth}
+aжа\\ aже\\ aжи\\ aжо\\ aжу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ежа\\ еже\\ ежи\\ ежо\\ ежу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ижа\\ иже\\ ижи\\ ижо\\ ижу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+ожа\\ оже\\ ожи\\ ожо\\ ожу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+ужа\\ уже\\ ужи\\ ужо\\ ужу
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.18\textwidth}
+жажа\\ жаже\\ жажи\\ жажо\\ жажу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+жежа\\ жеже\\ жежи\\ жежо\\ жежу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+жижа\\ жиже\\ жижи\\ жижо\\ жижу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+жожа\\ жоже\\ жожи\\ жожо\\ жожу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+жужа\\ жуже\\ жужи\\ жужо\\ жужу
+\end{minipage}
+
+\begin{instruction}
+  \begin{itemize}
+    \item Устата е во форма на крукче кај гласот Ш.
+    \item Забите се малку одвоени.
+    \item Врвот на јазикот е свртен нагоре позади горните запчиња.
+  \end{itemize}
+\end{instruction}
+
+
+\section{28.02.2025}
+\begin{minipage}[t]{0.3\textwidth}
+жа жа жааа\\ жа жа жеее\\ жа жа жиии\\ жа жа жооо\\ жа жа жууу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+же же жааа\\ же же жеее\\ же же жиии\\ же же жооо\\ же же жууу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+жи жи жааа\\ жи жи жеее\\ жи жи жиии\\ жи жи жооо\\ жи жи жууу
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}[t]{0.45\textwidth}
+жо жо жааа\\ жо жо жеее\\ жо жо жиии\\ жо жо жооо\\ жо жо жууу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+жу жу жааа\\ жу жу жеее\\ жу жу жиии\\ жу жу жооо\\ жу жу жууу
+\end{minipage}
+
+\section{14.03.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+жаба\\ жал\\ жалба\\ Жарко\\ жена\\ желба\\ жерав\\ животно\\ живот\\ желка\\ жирафа\\ жива\\ жито\\ желе\\ жица\\ Живко\\ жеден\\ жилет\\ жолчка\\ жубори\\ журнал
+\end{multicols}
+\end{activity}
+
+\begin{instruction}
+Вежбајте со продолжување на гласот „Ж“. Пр. \emph{жжжелка} и посилен изговор.
+\end{instruction}
+
+\section{19.03.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+кожа\\ кажа\\ може\\ покажи\\ лежи\\ лажица\\ гаража\\ може\\ пожар\\ плажа\\ мрежа\\ ружа\\ важи\\ ножици\\ виножито\\ фрижидер\\ грижи\\ Кожув\\ Блаже\\ ужинка\\ ужива\\ ожедне
+\end{multicols}
+\end{activity}
+
+\begin{instruction}
+\emph{ко-жжжа} и да ве гледа во уста за да се потсети на позиција на гласот „Ж“.
+\end{instruction}
+
+\section{21.03.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+нож\\ маж\\ еж\\ багаж\\ бакнеж\\ грабеж\\ колаж\\ дожд\\ гужва\\ тужба\\ важно\\ тажно\\ вежба\\ кожно\\ влажно
+\end{multicols}
+\end{activity}
+
+\begin{instruction}
+Повторно нагласувајте го и продолжувајте го гласот „Ж“ со посилен изговор.
+\end{instruction}
+
+\section{26.03.2025}
+\begin{itemize}
+  \item Живка живие во Штип.
+  \item Жане има жолта блуза.
+  \item Паркирај ја колата во гаража.
+  \item Ми се исполни желбата.
+  \item Желката е бавна.
+  \item Ежот има боцки.
+  \item Имам нешто важно да ти кажам.
+  \item Врне дожд.
+  \item Во лето одиме на плажа.
+  \item За ужинка имавме банана.
+  \item Жирафата има долг врат.
+  \item Жарко е жеден.
+  \item Се боцна со жица.
+  \item Сечев колаж со ножици.
+  \item Стави го шишето во фрижидер.
+\end{itemize}
+
+\section{28.03.2025}
+\begin{minipage}[t]{0.45\textwidth}
+  ча\\ че\\ чи\\ чо\\ чу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+  ач\\ еч\\ ич\\ оч\\ уч
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.18\textwidth}
+  ача\\ аче\\ ачи\\ ачо\\ ачу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  еча\\ ече\\ ечи\\ ечо\\ ечу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  ича\\ иче\\ ичи\\ ичо\\ ичу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  оча\\ оче\\ очи\\ очо\\ очу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  уча\\ уче\\ учи\\ учо\\ учу
+\end{minipage}
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+часовник\\ чад\\ чамец\\ чавки\\ чади\\ чепка\\ чека\\ четка\\ често\\ чорба\\ чеша\\ чадор\\ чукни\\ четири\\ чизми\\ чаша\\ чисто\\ чита\\ чорапи\\ чоколадо\\ четврток\\
+чаршав\\ рече\\ пече\\ мече\\ пречи\\ маче\\ плаче\\ куче\\ сече\\ влече\\ тече\\ бучава\\ прваче\\ печено\\ ручек\\ кочи\\ качи\\ печурки\\ вечера\\ значи\\ меч\\ клуч\\
+пејач\\ пливач\\ водич\\ кауч\\ ично\\ квачка\\ пајче\\ момче\\ маичка\\ рачка\\ печка\\ брчи\\ вчера\\ точно\\ бавча
+\end{multicols}
+\end{activity}
+
+\begin{itemize}
+  \item Чедо чека автобус. 
+  \item Мачето е гладно.
+  \item Во бавчата има печурки.
+  \item Вчера си купив нови чизми. 
+  \item Често одам во Кочани.
+\end{itemize}
+
+\begin{instruction}
+  Потсетувајте го устата да е напред, и посилен изговор.
+\end{instruction}
+
+\section{02.04.2025}
+\begin{minipage}[t]{0.45\textwidth}
+  џа\\ џе\\ џи\\ џо\\ џу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+  аџ\\ еџ\\ иџ\\ оџ\\ уџ
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}[t]{0.18\textwidth}
+  аџа\\ аџе\\ аџи\\ аџо\\ аџу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  еџа\\ еџе\\ еџи\\ еџо\\ еџу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+  иџа\\ иџе\\ иџи\\ иџо\\ иџу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  оџа\\ оџе\\ оџи\\ оџо\\ оџу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  уџа\\ уџе\\ уџи\\ уџо\\ уџу
+\end{minipage}
+
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+џамлија\\ џеб\\ џем\\ Џули\\ џамлија\\ џемпер\\ џамбо\\ џугла\\ џип\\ Џон\\ џигер\\ џокер\\ Џони\\ џудо\\ џагор\\ џумка\\ џин\\ џез\\ пинџур\\
+манџа\\ Маџари\\ баџо\\ џуџе\\ нинџа\\ маџун\\ буџет\\ гоџи\\ беџ\\ оџак\\ оџа\\ оџачар\\ џуџе\\ филџан\\ тенџере\\ канџа\\ манџа\\ џвака\\ џунџуле
+\end{multicols}
+\end{activity}
+
+\begin{itemize}
+  \item Со Џони изигравме со џамлии. 
+  \item Во џебот имам парички. 
+  \item Од Џамбо си купив играчки. 
+  \item На челото имам џумка. 
+  \item Манџата е вкусна. 
+  \item Во филџанот има кафе. 
+  \item Џули вози џип. 
+  \item Мечката има канџи.
+\end{itemize}
+
+\begin{song}
+  \textsl{Оџак}\\
+
+Симо џвака\\ 
+кришка со џем,\\ 
+облечен во нов\\
+џемпер со џеб.\\
+
+
+Малку од џемот\\
+на џемперот му капна\\
+како беџ врз џебот\\
+застана, стапна.
+\end{song}
+
+\section{04.04.2025}
+\noindent
+\begin{minipage}[t]{0.3\textwidth}
+  са-ша\\ се-ше\\ си-ши\\ со-шо\\ су-шу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  аса-аша\\ асе-аше\\ аси-аши\\ асо-ашо\\ асу-ашу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  еса-еша\\ есе-еше\\ еси-еши\\ есо-ешо\\ есу-ешу
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+иса-иша\\ исе-ише\\ иси-иши\\ исо-ишо\\ ису-ишу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+оса-оша\\ осе-оше\\ оси-оши\\ осо-ошо\\ осу-ошу
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+уса-уша\\ усе-уше\\ уси-уши\\ усо-ушо\\ усу-ушу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+ас-аш\\ ес-еш\\ ис-иш\\ ос-ош\\ ус-уш
+\end{minipage}
+
+\begin{instruction}
+Вежбајте ги истиве комбинации со З-Ж, Џ-Ч, Ѕ-Џ, без да ве гледа во уста.
+\end{instruction}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+супа - шупа\\ сака - шака\\ коса - коша\\ чаша - часа\\ маса - маша
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+шума - сума\\ шега - сега\\ уста - уште\\ што - сто\\ реси - реши
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+чело - цело\\ раче - раце
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+крцка - крчка\\ зрачи - зраци
+\end{minipage}
+
+\vspace{1cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+вазна - важна\\ коза - кожа\\ зелка - желка
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+заби - жаби\\ гриза - грижа\\ мази - мажи
+\end{minipage}
+
+\section{09.04.2025}
+\begin{activity}{Зборчиња}
+\begin{multicols}{4}
+суша\\ Сашо\\ сѐуште\\ секогаш\\ суштина\\ сошие\\ скрши\\ смешно\\ снешко\\ шанса\\ пасош\\ штос\\ шест\\ шумско\\ зачин\\ сначи\\ чисто\\ чамец
+чизма\\ задача\\ железо\\ зошто\\ возеше\\ ножици\\ железница\\ жица\\ цреша\\ Суничица\\ женско
+\end{multicols}
+\end{activity}
+
+\begin{itemize}
+    \item Симо шета сам. 
+    \item Зоки живее во Железара. 
+    \item Мишо сака шумско овошје. 
+    \item Шиме седи во соба. 
+    \item Цане чека автобус. 
+    \item Живко сака желе бонбони. 
+    \item Жане црта цреши. 
+    \item Џони зема кришка леб.
+\end{itemize}
+
+\begin{song}
+  \textsl{Саша и Мише}\\
+
+  Саша има машина\\
+  фустанчиња шие\\
+  за куклата шарена\\
+  во шкафот што спие.\\
+
+
+  Шие Саша шие,\\
+  а братчето Мише \\
+  отиде по сок \\
+  со шарено шише.
+\end{song}
+
+\section{16.04.2025}
+Вежби за гласот „Л“. 
+
+\begin{instruction}
+За правилен изговор на гласот „Л“
+\begin{itemize}
+  \item усните се во насмевка
+  \item забите се малку отворени 
+  \item јазичето е позади горните заби (за почеток додека добие навика дека треба да го користи јазикот може да го гризне со забите)
+\end{itemize}
+\end{instruction}
+
+\noindent
+ллллл - Л\\
+лллл - Ла\\
+лллл - Ле\\
+лллл - Ли\\
+лллл - Ло\\
+лллл - Лу\\
+
+Вежби за усни и јазик:
+
+\begin{itemize}
+  \item насмевка - бакнеж 
+  \item јазик горе-долу позади заби со отворена уста
+\end{itemize}
+
+\section{23.04.2025}
+
+\noindent
+\begin{minipage}[t]{0.18\textwidth}
+ла\\ ла\\ ла\\ ла\\ ла
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ле\\ ле\\ ле\\ ле\\ ле
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ли\\ ли\\ ли\\ ли\\ ли
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+ло\\ ло\\ ло\\ ло\\ ло
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+  лу\\ лу\\ лу\\ лу\\ лу
+\end{minipage}
+
+
+\section{25.04.2025}
+\begin{activity}{Зборчиња}
+ла, ла, ла - лапне, ладно, лав\\
+ле, ле, ле - леб, лечи, лето\\
+ли, ли, ли - лила, лик, лист\\
+ло, ло, ло - лото, ловец, локум\\
+лу, лу, лу - лути, лук, лушпа
+\end{activity}
+
+\section{07.05.2025}
+\noindent
+\begin{minipage}[t]{0.18\textwidth}
+ала\\ але\\ али\\ ало\\ алу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ела\\ еле\\ ели\\ ело\\ елу
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.18\textwidth}
+ила\\ иле\\ или\\ ило\\ илу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+ола\\ оле\\ оли\\ оло\\ олу
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.18\textwidth}
+ула\\ уле\\ ули\\ уло\\ улу
+\end{minipage}
+
+\begin{activity}{Зборчиња}
+  \begin{multicols}{4}
+молам\\ боли\\ бела\\ балон\\ пчела\\ колено\\ мила\\ кула\\ нула\\ весела\\ школо\\ цело\\ поле\\ кала\\ мала\\ желе\\ долу\\ балет\\ палачинки\\ чоколадо
+салама\\ салата\\ малина\\ скали\\ камила\\ пали\\ пелени\\ салон\\ волан\\ село\\ недела\\ табела\\ балада\\ кошула
+\end{multicols}
+\end{activity}
+
+\begin{instruction}
+  Делете го зборот на слогови за полесен изговор. Пр. \emph{са-ла}, \emph{мо-лам}.
+\end{instruction}
+
+\appendix
+\section{Полезные ресурсы} 
+\begin{itemize}
+  \item Книги по логопедии
+  \item Веб-сайты с упражнениями
+  \item Образцы артикуляционной гимнастики
+\end{itemize}
+
+% Document ends
+\end{document}
